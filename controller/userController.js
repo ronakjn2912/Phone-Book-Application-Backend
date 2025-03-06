@@ -52,7 +52,7 @@ const loginUser = asyncHandler(async (req, res) => {
 
   const user = await User.findOne({ where: { username: username } });
   if (user && (await bcrypt.compare(password, user.password))) {
-    const accessToken = jwt.sign(
+    const accessToken = jwt.sign( 
       {
         //payload
         user: {

@@ -21,9 +21,6 @@ const Contact = sequelize.define(
     phone: {
       type: DataTypes.STRING,
     },
-    date: {
-      type: DataTypes.DATE,
-    },
     cgroup: {
       type: DataTypes.STRING,
     },
@@ -32,7 +29,8 @@ const Contact = sequelize.define(
     },
   },
   {
-    timestamps: false,
+    createdAt: true,
+    updatedAt: false,
   }
 );
 
